@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "O9zAYPIykVrrHRgOXSyf6NTLN71uyM2p/z+QPl+EKUFToTurS3m3djaHHvZMJTMrt0UiAmL2gABgsnfHrnnxfA==",
+  "success": true,
+  "projectFilePath": "/home/daniel/Área de Trabalho/code examples/codigos/PROJETOS/c# mvc/Loja/Loja.csproj",
+  "expectedPackageFiles": [
+    "/home/daniel/.nuget/packages/mysqlconnector/2.2.5/mysqlconnector.2.2.5.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,68 @@
+@model Property
+
+<h5> Editar informações </h5>
+
+<div class="card">
+    <div class="card-body">
+        <form method="POST" asp-action = "Update">
+            <input type="hidden" asp-for="IdProperty">
+               <div>
+                <label>Nome</label>
+                <input asp-for = "Nome">
+            </div>
+            <div>
+                <label>Email</label>
+                <input asp-for = "Email">
+            </div>
+            <div>
+                <label>Rua</label>
+                <input asp-for = "Rua">
+            </div>
+            <div>
+                <label>Numero</label>
+                <input asp-for = "Numero">
+            </div>
+            <div>
+                <label>Bairro</label>
+                <input asp-for = "Bairro">
+            </div>
+            <div>
+                <label>Cidade</label>
+                <input asp-for = "Cidade">
+            </div>
+            <div>
+                <label>Cep</label>
+                <input asp-for = "Cep">
+            </div>
+            <div>
+                <label>Estado</label>
+                <input asp-for = "Estado">
+            </div>
+            <div>
+                <label>Pais</label>
+                <input asp-for = "Pais">
+            </div>
+            <div>
+                <label>Pedido</label>
+                <input asp-for = "Pedido">
+            </div>
+            <div>
+                <label>Entrada</label>
+                <input asp-for = "Entrada">
+            </div>
+            <div>
+                <label>Total</label>
+                <input asp-for = "Total">
+            </div>
+            <div>
+                <label>Data e horário</label>
+                <input asp-for = "Data">
+            </div>
+            <label>Informações complementares</label>
+            <div class="text-center">
+                <textarea name="Registros" rows="2" cols="106"></textarea>
+            </div>
+            <input type="submit" value="Editar">
+        </form>
+    </div>
+</div>

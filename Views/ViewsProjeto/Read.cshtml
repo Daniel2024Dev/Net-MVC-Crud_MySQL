@@ -1,0 +1,68 @@
+@model List<Property>
+@using System.Globalization;
+<h5> clientes cadastrados </h5>
+
+@{int Cont = 0;}
+
+@foreach (Property a in Model)
+{
+    Cont ++;
+    <div class="card">
+        <div class="card-body">
+            <table class="table"> 
+
+                <tr>Nome : @a.Nome</tr><br>
+
+                <tr>Email : @a.Email</tr><br>
+        
+                <tr>Rua : @a.Rua</tr><br>
+            
+                <tr>Numero : @a.Numero</tr><br>
+        
+                <tr>Bairro : @a.Bairro</tr><br>
+            
+                <tr>Cidade : @a.Cidade</tr><br>
+
+                <tr>Cep : @a.Cep</tr><br>
+            
+                <tr>Estado : @a.Estado</tr><br>
+            
+                <tr>Pais : @a.Pais</tr><br>
+            
+                <tr>Pedido : @a.Pedido</tr><br>
+            
+                <tr>Entrada :  @a.Entrada.ToString("C", CultureInfo.CurrentCulture)</tr><br>
+
+                <tr>Total :  @a.Total.ToString("C", CultureInfo.CurrentCulture)</tr><br>
+
+                @{
+                    if(a.Restante > 0)
+                    {
+                        <tr>Falta o cliente pagar : @a.Restante.ToString("C", CultureInfo.CurrentCulture)</tr><br>
+                    }
+                }
+
+                <tr>Data : @a.Data</tr><br>
+        
+                <tr>Informações complementares
+                    <div class="text-center">
+                        <textarea rows="4" cols="106">@a.Registros</textarea>
+                    </div>
+                </tr>
+
+                <button type="button" class="btn btn-outline-primary"><a href="/ViewsProjeto/Update?Id=@a.IdProperty"> Editar </a></button>
+                <button type="button" class="btn btn-outline-primary"><a href="/ViewsProjeto/Delete?Id=@a.IdProperty"> Excluir </a></button>
+                <button type="button" class="btn btn-outline-primary"><a href="/ViewsProjeto/Create"> cadastrar novo cliente </a></button>
+            </table>
+        </div>
+    </div>
+}
+        
+@{  
+    if(Cont < 1)
+    {
+        <div class="text-center">
+            <h2> Ainda não foi cadastrado clientes ! </h2>
+        </div>
+    }
+}   
